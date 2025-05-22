@@ -3,29 +3,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Simulador Binance AI Trading</title>
+  <title>Binance AI Trading</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance" class="logo" onclick="goHome()" />
-    <h1>Simulador Binance AI Trading</h1>
+    <img src="logo.png" alt="Logo Binance" id="logo" />
   </header>
 
   <main>
-    <section id="precios" class="card"></section>
-    <section id="login" class="card">
-      <input type="text" id="usuario" placeholder="Usuario" />
-      <button onclick="login()">Iniciar sesión</button>
+    <section id="crypto-prices" class="hidden"></section>
+
+    <section id="login-section">
+      <h2>Iniciar sesión</h2>
+      <input type="text" id="username" placeholder="Usuario" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="login()">Entrar</button>
     </section>
+
     <section id="dashboard" class="hidden">
-      <p>Bienvenido, <span id="nombreUsuario"></span></p>
-      <p>Balance: $<span id="balance">0</span></p>
-      <button onclick="abrirOperacion()">Abrir operación</button>
-      <button onclick="retirarFondos()">Retirar</button>
-      <div id="operacionesAbiertas" class="card"></div>
-      <button onclick="mostrarHistorial()">Mostrar historial</button>
-      <div id="historial" class="card hidden"></div>
+      <h2>Panel de Trading</h2>
+      <div id="user-info"></div>
+      <div id="balance-section">Balance: $<span id="balance">0</span></div>
+
+      <div id="operaciones">
+        <button onclick="abrirOperacion()">Abrir operación</button>
+        <button onclick="retirarFondos()">Retirar fondos</button>
+        <div id="operaciones-abiertas"></div>
+        <button onclick="toggleHistorial()">Mostrar historial</button>
+        <div id="historial" class="hidden"></div>
+      </div>
     </section>
   </main>
 
