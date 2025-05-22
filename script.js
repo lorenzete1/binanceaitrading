@@ -9,12 +9,11 @@ async function obtenerPrecios() {
   const d = await r.json();
   const top = d.slice(0, 10);
   const contenedor = document.getElementById("crypto-prices");
-  contenedor.innerHTML = "<h3>Precios Cripto (Tiempo Real)</h3>";
+  contenedor.innerHTML = "<h3>Precios Cripto</h3>";
   top.forEach(c => {
     const p = parseFloat(c.price).toFixed(2);
     contenedor.innerHTML += `<div><strong>${c.symbol}</strong>: $${p}</div>`;
   });
-  contenedor.classList.remove("hidden");
 }
 
 function login() {

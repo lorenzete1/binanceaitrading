@@ -1,41 +1,66 @@
 
 body {
-  background-color: #0e111a;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  background-color: #0d0d0d;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f3ba2f;
 }
-header {
-  padding: 10px;
-  background-color: #f3ba2f;
+.header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 15px;
+  background-color: #000;
+  box-shadow: 0 2px 8px #f3ba2f44;
 }
-#logo {
+.logo {
   height: 40px;
+  margin-right: 15px;
   cursor: pointer;
 }
 main {
   padding: 20px;
+  animation: fadeIn 1.2s ease-in;
 }
-.hidden {
-  display: none;
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+.login-card, .dashboard {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f3ba2f33;
+  max-width: 400px;
+  margin: 40px auto;
 }
 input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
   padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
   border: none;
+  border-radius: 8px;
 }
 button {
   background-color: #f3ba2f;
   color: #000;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
-#operaciones-abiertas div, #historial div {
-  background-color: #1c1f2a;
-  padding: 8px;
-  margin-top: 5px;
+button:hover {
+  background-color: #ddb120;
+}
+.hidden {
+  display: none;
+}
+.operaciones div, .historial div {
+  background-color: #141414;
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 4px solid #f3ba2f;
   border-radius: 6px;
+}
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
 }

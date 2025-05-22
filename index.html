@@ -4,35 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <title>Binance AI Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Binance" id="logo" />
+  <header class="header">
+    <img src="logo.png" alt="Binance Logo" id="logo" class="logo" />
+    <h1>Binance AI Trading</h1>
   </header>
 
-  <main>
-    <section id="crypto-prices" class="hidden"></section>
-
-    <section id="login-section">
-      <h2>Iniciar sesión</h2>
+  <main class="fade-in">
+    <section class="login-card" id="login-section">
+      <h2>Iniciar Sesión</h2>
       <input type="text" id="username" placeholder="Usuario" />
       <input type="password" id="password" placeholder="Contraseña" />
       <button onclick="login()">Entrar</button>
     </section>
 
-    <section id="dashboard" class="hidden">
-      <h2>Panel de Trading</h2>
-      <div id="user-info"></div>
-      <div id="balance-section">Balance: $<span id="balance">0</span></div>
+    <section id="dashboard" class="dashboard hidden">
+      <div class="user-panel">
+        <p id="user-info"></p>
+        <p>Balance: $<span id="balance">0</span></p>
+      </div>
 
-      <div id="operaciones">
+      <div id="crypto-prices" class="prices"></div>
+
+      <div class="acciones">
         <button onclick="abrirOperacion()">Abrir operación</button>
         <button onclick="retirarFondos()">Retirar fondos</button>
-        <div id="operaciones-abiertas"></div>
-        <button onclick="toggleHistorial()">Mostrar historial</button>
-        <div id="historial" class="hidden"></div>
+        <button onclick="toggleHistorial()">Historial</button>
       </div>
+
+      <div id="operaciones-abiertas" class="operaciones"></div>
+      <div id="historial" class="historial hidden"></div>
     </section>
   </main>
 
