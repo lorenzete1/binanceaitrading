@@ -2,13 +2,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Simulador Binance</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Simulador Binance AI Trading</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>✅ Versión preparada para git push</h1>
-  <p>Este archivo está listo para ser empujado a GitHub</p>
+  <header>
+    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance" class="logo" onclick="goHome()" />
+    <h1>Simulador Binance AI Trading</h1>
+  </header>
+
+  <main>
+    <section id="precios" class="card"></section>
+    <section id="login" class="card">
+      <input type="text" id="usuario" placeholder="Usuario" />
+      <button onclick="login()">Iniciar sesión</button>
+    </section>
+    <section id="dashboard" class="hidden">
+      <p>Bienvenido, <span id="nombreUsuario"></span></p>
+      <p>Balance: $<span id="balance">0</span></p>
+      <button onclick="abrirOperacion()">Abrir operación</button>
+      <button onclick="retirarFondos()">Retirar</button>
+      <div id="operacionesAbiertas" class="card"></div>
+      <button onclick="mostrarHistorial()">Mostrar historial</button>
+      <div id="historial" class="card hidden"></div>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
