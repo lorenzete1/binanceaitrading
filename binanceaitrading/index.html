@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Binance Trading</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <img src="binance-logo.png" class="logo" onclick="window.location.href='index.html'" />
+    <nav class="nav">
+      <button id="login-btn">Entrar</button>
+    </nav>
+  </header>
+  <main class="main">
+    <section id="login-section" class="login-section">
+      <h1>Bienvenido a Binance Trading</h1>
+      <input type="email" id="email" placeholder="Correo electrónico" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button id="submit-login">Iniciar sesión</button>
+    </section>
+    <section id="dashboard" class="hidden">
+      <h2>Panel de usuario</h2>
+      <div id="balance">Balance: $0</div>
+      <div id="market-prices"></div>
+      <div id="operations"></div>
+    </section>
+  </main>
+</body>
+</html>
